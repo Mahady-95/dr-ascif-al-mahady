@@ -41,3 +41,85 @@ footer { background: #111a21; color: #b7c2ca; padding: 25px 0; font-size: .9rem;
   object-fit: cover;
   border-radius: 32px;
 }
+/* Extra polish */
+
+.hero-description {
+  color: #52606d;
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #0b6e75;
+}
+
+.service-card {
+  border: 1px solid #e5ecef;
+}
+
+.chamber-card h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-form button {
+  width: fit-content;
+}
+
+.doctor-photo {
+  overflow: hidden;
+}
+
+.doctor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+@media (max-width: 767px) {
+
+  .hero {
+    padding: 120px 0 70px;
+    text-align: center;
+  }
+
+  .hero .d-flex {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .doctor-photo {
+    width: 280px;
+    height: 340px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .appointment-section {
+    padding: 70px 20px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
