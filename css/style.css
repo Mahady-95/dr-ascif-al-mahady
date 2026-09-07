@@ -25,7 +25,8 @@ body { font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; col
 .service-card h3 { margin-top: 18px; font-size: 1.25rem; }
 .service-card p { color: #66737f; }
 .status { display: inline-block; background: #e8f7ee; color: #18794e; padding: 7px 12px; border-radius: 99px; font-size: .8rem; font-weight: 700; margin-bottom: 20px; }
-.map-placeholder { min-height: 260px; background: #eef3f4; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #66737f; }
+.map-placeholder { min-height: 260px; background: #eef3f4; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #66737f; width: 100%;
+overflow: hidden;}
 .map-placeholder i { font-size: 3rem; color: #0b6e75; }
 .appointment-section { padding: 90px 0; background: #0b6e75; color: white; }
 .appointment-section .section-label { color: #b9ece8; }
@@ -123,3 +124,586 @@ footer { background: #111a21; color: #b7c2ca; padding: 25px 0; font-size: .9rem;
     text-align: center;
   }
 }
+
+/* ================================
+   HERO ANIMATIONS
+   ================================ */
+
+/* Hero text elements start hidden */
+.hero .badge,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero .lead,
+.hero .hero-description,
+.hero .d-flex {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: heroFadeUp 0.8s ease forwards;
+}
+
+/* Stagger the animation */
+.hero .badge {
+  animation-delay: 0.1s;
+}
+
+.hero h1 {
+  animation-delay: 0.25s;
+}
+
+.hero h2 {
+  animation-delay: 0.4s;
+}
+
+.hero h3 {
+  animation-delay: 0.5s;
+}
+
+.hero .lead {
+  animation-delay: 0.6s;
+}
+
+.hero .hero-description {
+  animation-delay: 0.7s;
+}
+
+.hero .d-flex {
+  animation-delay: 0.85s;
+}
+
+
+/* Doctor photo animation */
+.doctor-photo {
+  opacity: 0;
+  transform: translateX(40px) scale(0.96);
+  animation: doctorPhotoReveal 1s ease 0.35s forwards;
+}
+
+
+/* Text animation */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Doctor image animation */
+@keyframes doctorPhotoReveal {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Doctor photo hover effect */
+/* .doctor-photo {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.doctor-photo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.14);
+} */
+
+
+/* ================================
+   ABOUT SECTION SCROLL ANIMATION
+   ================================ */
+
+/* Initial state */
+#about .section-label,
+#about h2,
+#about p,
+#about .info-card {
+  opacity: 0;
+}
+
+/* Left side animation */
+#about .section-label,
+#about h2,
+#about p {
+  transform: translateX(-35px);
+}
+
+/* Right side animation */
+#about .info-card {
+  transform: translateX(35px);
+}
+
+
+/* Animation when section becomes visible */
+#about.about-visible .section-label {
+  animation: aboutLeftReveal 0.7s ease forwards;
+  animation-delay: 0.1s;
+}
+
+#about.about-visible h2 {
+  animation: aboutLeftReveal 0.7s ease forwards;
+  animation-delay: 0.25s;
+}
+
+#about.about-visible p:nth-of-type(1) {
+  animation: aboutLeftReveal 0.7s ease forwards;
+  animation-delay: 0.4s;
+}
+
+#about.about-visible p:nth-of-type(2) {
+  animation: aboutLeftReveal 0.7s ease forwards;
+  animation-delay: 0.55s;
+}
+
+#about.about-visible .info-card {
+  animation: aboutRightReveal 0.8s ease forwards;
+  animation-delay: 0.25s;
+}
+
+
+/* Left reveal */
+@keyframes aboutLeftReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Right reveal */
+@keyframes aboutRightReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================================
+   SERVICES SECTION SCROLL ANIMATION
+   ================================ */
+
+/* Initial hidden state */
+#services .text-center.mb-5,
+#services .col-md-6 {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+
+/* Heading animation */
+#services.services-visible .text-center.mb-5 {
+  animation: servicesFadeUp 0.7s ease forwards;
+}
+
+
+/* Service cards animation */
+#services.services-visible .col-md-6:nth-child(1) {
+  animation: servicesFadeUp 0.7s ease 0.15s forwards;
+}
+
+#services.services-visible .col-md-6:nth-child(2) {
+  animation: servicesFadeUp 0.7s ease 0.25s forwards;
+}
+
+#services.services-visible .col-md-6:nth-child(3) {
+  animation: servicesFadeUp 0.7s ease 0.35s forwards;
+}
+
+#services.services-visible .col-md-6:nth-child(4) {
+  animation: servicesFadeUp 0.7s ease 0.45s forwards;
+}
+
+#services.services-visible .col-md-6:nth-child(5) {
+  animation: servicesFadeUp 0.7s ease 0.55s forwards;
+}
+
+#services.services-visible .col-md-6:nth-child(6) {
+  animation: servicesFadeUp 0.7s ease 0.65s forwards;
+}
+
+
+/* Animation */
+@keyframes servicesFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Service icon hover */
+#services .service-card i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#services .service-card:hover i {
+  transform: scale(1.1);
+}
+
+/* ================================
+   WHY CHOOSE US SCROLL ANIMATION
+   ================================ */
+
+/* Initial hidden state */
+#why .section-label,
+#why h2,
+#why .col-md-4 {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+
+/* Heading */
+#why.why-visible .section-label {
+  animation: whyFadeUp 0.7s ease 0.1s forwards;
+}
+
+#why.why-visible h2 {
+  animation: whyFadeUp 0.7s ease 0.25s forwards;
+}
+
+
+/* Cards */
+#why.why-visible .col-md-4:nth-child(1) {
+  animation: whyFadeUp 0.7s ease 0.4s forwards;
+}
+
+#why.why-visible .col-md-4:nth-child(2) {
+  animation: whyFadeUp 0.7s ease 0.55s forwards;
+}
+
+#why.why-visible .col-md-4:nth-child(3) {
+  animation: whyFadeUp 0.7s ease 0.7s forwards;
+}
+
+
+/* Animation */
+@keyframes whyFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Icon hover */
+#why .service-card i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#why .service-card:hover i {
+  transform: scale(1.1);
+}
+
+/* ================================
+   CHAMBER SECTION SCROLL ANIMATION
+   ================================ */
+
+/* Initial state */
+#chamber .section-label,
+#chamber h2,
+#chamber .chamber-card,
+#chamber .map-placeholder {
+  opacity: 0;
+}
+
+
+/* Heading */
+#chamber.chamber-visible .section-label {
+  animation: chamberFadeUp 0.7s ease 0.1s forwards;
+}
+
+#chamber.chamber-visible h2 {
+  animation: chamberFadeUp 0.7s ease 0.25s forwards;
+}
+
+
+/* Chamber information - left side */
+#chamber.chamber-visible .chamber-card {
+  animation: chamberFromLeft 0.8s ease 0.35s forwards;
+}
+
+
+/* Google Map - right side */
+#chamber.chamber-visible .map-placeholder {
+  animation: chamberFromRight 0.8s ease 0.45s forwards;
+}
+
+
+/* Heading / common animation */
+@keyframes chamberFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Left animation */
+@keyframes chamberFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Right animation */
+@keyframes chamberFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Chamber card hover */
+#chamber .chamber-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chamber .chamber-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   APPOINTMENT SECTION ANIMATION
+   ================================ */
+
+/* Initial state */
+#appointment h2,
+#appointment p,
+#appointment .btn {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+
+/* Heading */
+#appointment.appointment-visible h2 {
+  animation: appointmentFadeUp 0.7s ease 0.1s forwards;
+}
+
+
+/* Description */
+#appointment.appointment-visible p {
+  animation: appointmentFadeUp 0.7s ease 0.25s forwards;
+}
+
+
+/* Buttons */
+#appointment.appointment-visible .btn:nth-child(1) {
+  animation: appointmentFadeUp 0.7s ease 0.4s forwards;
+}
+
+#appointment.appointment-visible .btn:nth-child(2) {
+  animation: appointmentFadeUp 0.7s ease 0.55s forwards;
+}
+
+
+/* Animation */
+@keyframes appointmentFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Button hover */
+#appointment .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#appointment .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Subtle WhatsApp attention effect */
+#appointment .btn-success:hover {
+  animation: whatsappPulse 1.2s ease-in-out;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: translateY(-3px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-3px) scale(1.03);
+  }
+
+  100% {
+    transform: translateY(-3px) scale(1);
+  }
+}
+
+/* ================================
+   CONTACT SECTION SCROLL ANIMATION
+   ================================ */
+
+/* Initial state */
+#contact .section-label,
+#contact h2,
+#contact .contact-item,
+#contact .contact-form {
+  opacity: 0;
+}
+
+
+/* Heading */
+#contact.contact-visible .section-label {
+  animation: contactFadeUp 0.7s ease 0.1s forwards;
+}
+
+#contact.contact-visible h2 {
+  animation: contactFadeUp 0.7s ease 0.25s forwards;
+}
+
+
+/* Contact information */
+#contact.contact-visible .contact-item {
+  animation: contactFromLeft 0.7s ease 0.4s forwards;
+}
+
+
+/* Contact form */
+#contact.contact-visible .contact-form {
+  animation: contactFromRight 0.8s ease 0.45s forwards;
+}
+
+
+/* Fade up */
+@keyframes contactFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Left side */
+@keyframes contactFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Right side */
+@keyframes contactFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Contact item hover */
+#contact .contact-item {
+  transition: transform 0.3s ease;
+}
+
+#contact .contact-item:hover {
+  transform: translateX(5px);
+}
+
+
+/* Form focus effect */
+#contact .contact-form input,
+#contact .contact-form textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.08);
+}
+
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+
+/* * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+} */
