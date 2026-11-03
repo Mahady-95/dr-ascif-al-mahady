@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Ascif Al Mahady (Anik) | ENT Specialist | MBBS, MS</title>
+  <title data-i18n="meta.title">Dr. Ascif Al Mahady (Anik) | ENT Specialist | MBBS, MS</title>
   <meta name="description"
-    content="Dr. Asci Al Mahady (Anik) is an ENT Specialist with MBBS and MS qualification, providing consultation for ear, nose, throat and head & neck conditions in Dhaka.">
+    content="Dr. Ascif Al Mahady (Anik) is an ENT Specialist with MBBS and MS qualification, providing consultation for ear, nose, throat and head & neck conditions in Dhaka."
+    data-i18n="meta.description" data-i18n-attr="content">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -16,20 +17,34 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">Dr. Ascif Al Mahady (Anik)</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <a class="navbar-brand" href="#home" aria-label="Dr. Ascif Al Mahady, ENT Specialist, home"
+        data-i18n="nav.brandLabel" data-i18n-attr="aria-label">
+        <span class="brand-mark" aria-hidden="true"><i class="bi bi-ear"></i></span>
+        <span class="brand-copy">
+          <strong data-i18n="common.doctorName">Dr. Ascif Al Mahady (Anik)</strong>
+          <small data-i18n="common.specialist">ENT Specialist</small>
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"
+        data-i18n="nav.toggleLabel" data-i18n-attr="aria-label">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#home" data-i18n="nav.home">Home</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#chamber">Chamber</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="btn btn-primary rounded-pill px-4" href="#appointment">Book Appointment</a>
+          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav.services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chamber" data-i18n="nav.chamber">Chamber</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li class="nav-item">
+            <div class="language-switcher" role="group" aria-label="Select language" data-i18n="nav.languageLabel" data-i18n-attr="aria-label">
+              <button type="button" class="language-option is-selected" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button type="button" class="language-option" data-language="bn" lang="bn" aria-label="বাংলা" aria-pressed="false">বাংলা</button>
+            </div>
+          </li>
+          <li class="nav-item"><a class="btn btn-primary nav-appointment" href="#appointment"><i class="bi bi-calendar2-check" aria-hidden="true"></i> <span data-i18n="nav.book">Book Appointment</span></a>
           </li>
         </ul>
       </div>
@@ -41,22 +56,22 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-7">
           <!-- <span class="badge rounded-pill text-bg-light mb-3">Professional Medical Care</span> -->
-          <h1>Dr. Ascif Al Mahady (Anik)</h1>
-          <h2>ENT Specialist</h2><br>
-          <h3> Associate Professor of Otolaryngology <br> Enam Medical College & Hospital </h3>
+          <h1 data-i18n="common.doctorName">Dr. Ascif Al Mahady (Anik)</h1>
+          <h2 data-i18n="common.specialist">ENT Specialist</h2><br>
+          <h3><span data-i18n="hero.role">Associate Professor of Otolaryngology</span><br><span data-i18n="common.hospital">Enam Medical College &amp; Hospital</span></h3>
           <p class="lead">
-            MBBS, MS (ENT &amp; Head-Neck Surgery)
+            <span data-i18n="hero.qualification">MBBS, MS (ENT &amp; Head-Neck Surgery)</span>
           </p>
-          <p class="hero-description">
+          <p class="hero-description" data-i18n="hero.description">
             Providing specialized care for ear, nose, throat and related
             head &amp; neck conditions with a patient-focused approach.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#appointment" class="btn btn-primary btn-lg rounded-pill px-4">
-              Book an Appointment
+              <span data-i18n="hero.book">Book an Appointment</span>
             </a>
             <a href="tel:+8801799915895" class="btn btn-outline-dark btn-lg rounded-pill px-4"><i
-                class="bi bi-telephone me-2"></i>Call Now</a>
+                class="bi bi-telephone me-2"></i><span data-i18n="hero.call">Call Now</span></a>
           </div>
         </div>
         <div class="col-lg-5 text-center">
@@ -65,7 +80,7 @@
           </div> -->
 
           <div class="doctor-photo">
-            <img src="images/anik_si.jpeg" alt="Dr. Doctor Name">
+            <img src="images/anik_si.jpeg" alt="Dr. Ascif Al Mahady" data-i18n="hero.photoAlt" data-i18n-attr="alt">
           </div>
         </div>
       </div>
@@ -76,15 +91,15 @@
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-lg-6">
-          <span class="section-label">ABOUT THE DOCTOR</span>
-          <h2>Trusted care with experience and compassion.</h2>
-          <p>
+          <span class="section-label" data-i18n="about.label">ABOUT THE DOCTOR</span>
+          <h2 data-i18n="about.heading">Trusted care with experience and compassion.</h2>
+          <p data-i18n="about.paragraph1">
             Dr. Ascif Al Mahady (Anik) is an ENT Specialist with an MBBS and MS qualification,
             providing consultation and treatment for a wide range of ear, nose,
             throat and head &amp; neck conditions.
           </p>
 
-          <p>
+          <p data-i18n="about.paragraph2">
             With a patient-centered approach, the doctor focuses on careful
             evaluation, accurate diagnosis and appropriate treatment for both
             common and complex ENT conditions.
@@ -94,17 +109,17 @@
         <div class="col-lg-6">
           <div class="info-card">
             <div class="info-row"><i class="bi bi-mortarboard"></i>
-              <div><strong>Qualifications</strong><br>MBBS, MS</div>
+              <div><strong data-i18n="about.qualifications">Qualifications</strong><br><span data-i18n="about.qualificationValue">MBBS, MS</span></div>
             </div>
             <div class="info-row"><i class="bi bi-award"></i>
-              <div><strong>Experience</strong><br>5+ Years in Clinical Practice</div>
+              <div><strong data-i18n="about.experience">Experience</strong><br><span data-i18n="about.experienceValue">5+ Years in Clinical Practice</span></div>
             </div>
             <div class="info-row"><i class="bi bi-hospital"></i>
-              <div><strong>Affiliation</strong><br>Enam Medical College & Hospital</div>
+              <div><strong data-i18n="about.affiliation">Affiliation</strong><br><span data-i18n="common.hospital">Enam Medical College &amp; Hospital</span></div>
             </div>
             <div class="info-row"><i class="bi bi-heart-pulse"></i>
-              <div><strong>Specialty</strong><br>
-                ENT &amp; Head-Neck Surgery</div>
+              <div><strong data-i18n="about.specialty">Specialty</strong><br>
+                <span data-i18n="about.specialtyValue">ENT &amp; Head-Neck Surgery</span></div>
             </div>
           </div>
         </div>
@@ -115,16 +130,16 @@
   <section id="services" class="section section-soft">
     <div class="container">
       <div class="text-center mb-5">
-        <span class="section-label">SERVICES</span>
-        <h2>Areas of medical care</h2>
+          <span class="section-label" data-i18n="services.label">SERVICES</span>
+          <h2 data-i18n="services.heading">Areas of medical care</h2>
         <!-- <p class="text-muted">Replace these with the doctor's actual specialties.</p> -->
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-ear"></i>
-            <h3>Ear Problems</h3>
-            <p>
+            <h3 data-i18n="services.earTitle">Ear Problems</h3>
+            <p data-i18n="services.earDescription">
               Evaluation and treatment of common ear infections,
               ear pain, hearing problems and related conditions.
             </p>
@@ -133,8 +148,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-ear"></i>
-            <h3>Ear Problems</h3>
-            <p>
+            <h3 data-i18n="services.earTitle">Ear Problems</h3>
+            <p data-i18n="services.earDescription">
               Evaluation and treatment of common ear infections,
               ear pain, hearing problems and related conditions.
             </p>
@@ -143,8 +158,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-wind"></i>
-            <h3>Nose &amp; Sinus Problems</h3>
-            <p>
+            <h3 data-i18n="services.noseTitle">Nose &amp; Sinus Problems</h3>
+            <p data-i18n="services.noseDescription">
               Consultation for sinusitis, nasal blockage,
               allergy-related problems and other nasal conditions.
             </p>
@@ -153,8 +168,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-volume-up"></i>
-            <h3>Hearing &amp; Voice</h3>
-            <p>
+            <h3 data-i18n="services.hearingTitle">Hearing &amp; Voice</h3>
+            <p data-i18n="services.hearingDescription">
               Assessment of hearing difficulties, voice problems
               and other related ENT concerns.
             </p>
@@ -163,8 +178,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-person"></i>
-            <h3>Head &amp; Neck Conditions</h3>
-            <p>
+            <h3 data-i18n="services.headNeckTitle">Head &amp; Neck Conditions</h3>
+            <p data-i18n="services.headNeckDescription">
               Clinical evaluation and treatment guidance for
               common head and neck conditions.
             </p>
@@ -173,8 +188,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="service-card">
             <i class="bi bi-clipboard2-pulse"></i>
-            <h3>ENT Consultation</h3>
-            <p>
+            <h3 data-i18n="services.consultTitle">ENT Consultation</h3>
+            <p data-i18n="services.consultDescription">
               Comprehensive ENT consultation with personalized
               diagnosis and treatment planning.
             </p>
@@ -187,16 +202,16 @@
   <section id="why" class="section">
     <div class="container">
       <div class="text-center mb-5">
-        <span class="section-label">WHY CHOOSE</span>
-        <h2>Patient-focused ENT care</h2>
+          <span class="section-label" data-i18n="why.label">WHY CHOOSE</span>
+          <h2 data-i18n="why.heading">Patient-focused ENT care</h2>
       </div>
 
       <div class="row g-4">
         <div class="col-md-4">
           <div class="service-card text-center">
             <i class="bi bi-person-check"></i>
-            <h3>Patient Focused</h3>
-            <p>
+            <h3 data-i18n="why.patientTitle">Patient Focused</h3>
+            <p data-i18n="why.patientDescription">
               Every consultation begins with understanding
               the patient's symptoms and concerns.
             </p>
@@ -206,8 +221,8 @@
         <div class="col-md-4">
           <div class="service-card text-center">
             <i class="bi bi-search"></i>
-            <h3>Careful Evaluation</h3>
-            <p>
+            <h3 data-i18n="why.evaluationTitle">Careful Evaluation</h3>
+            <p data-i18n="why.evaluationDescription">
               Detailed clinical assessment to support
               appropriate diagnosis and treatment.
             </p>
@@ -217,8 +232,8 @@
         <div class="col-md-4">
           <div class="service-card text-center">
             <i class="bi bi-heart"></i>
-            <h3>Compassionate Care</h3>
-            <p>
+            <h3 data-i18n="why.compassionTitle">Compassionate Care</h3>
+            <p data-i18n="why.compassionDescription">
               Clear communication and personalized care
               throughout the consultation process.
             </p>
@@ -231,24 +246,24 @@
   <section id="chamber" class="section">
     <div class="container">
       <div class="text-center mb-5">
-        <span class="section-label">CHAMBER</span>
-        <h2>Consultation information</h2>
+          <span class="section-label" data-i18n="chamber.label">CHAMBER</span>
+          <h2 data-i18n="chamber.heading">Consultation information</h2>
       </div>
       <div class="row g-4">
         <div class="col-lg-6">
           <div class="chamber-card h-100">
-            <span class="status">Available for consultation</span>
-            <h3>Enam Medical College & Hospital</h3>
-            <p><i class="bi bi-geo-alt me-2"></i>Address, Thana Stand Road, Savar, Dhaka, Bangladesh</p>
-            <p><i class="bi bi-clock me-2"></i>Sat–Thu: 8:00 AM – 2:30 PM</p>
+            <span class="status" data-i18n="chamber.status">Available for consultation</span>
+            <h3 data-i18n="common.hospital">Enam Medical College &amp; Hospital</h3>
+            <p><i class="bi bi-geo-alt me-2"></i><span data-i18n="chamber.address">Address, Thana Stand Road, Savar, Dhaka, Bangladesh</span></p>
+            <p><i class="bi bi-clock me-2"></i><span data-i18n="chamber.hours">Sat–Thu: 8:00 AM – 2:30 PM</span></p>
             <p><i class="bi bi-telephone me-2"></i>+880 1799-915895</p>
-            <a href="https://maps.app.goo.gl/42PokC2pygcSKT1A9" class="btn btn-outline-primary rounded-pill">Get Directions</a>
+            <a href="https://maps.app.goo.gl/42PokC2pygcSKT1A9" class="btn btn-outline-primary rounded-pill" data-i18n="chamber.directions">Get Directions</a>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="map-placeholder h-100">
             <i class="bi bi-map"></i>
-            <iframe
+            <iframe data-language-frame
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.464090398019!2d90.25049357546462!3d23.837648635420948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755eb44dcb4d975%3A0x25cfe643987539c9!2sEnam%20Medical%20College!5e0!3m2!1sen!2sbd!4v1788682476909!5m2!1sen!2sbd"
               width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -260,14 +275,14 @@
 
   <section id="appointment" class="appointment-section">
     <div class="container text-center">
-      <span class="section-label">APPOINTMENT</span>
-      <h2>Need a consultation?</h2>
-      <p>Call or send a WhatsApp message to schedule an appointment.</p>
+      <span class="section-label" data-i18n="appointment.label">APPOINTMENT</span>
+      <h2 data-i18n="appointment.heading">Need a consultation?</h2>
+      <p data-i18n="appointment.description">Call or send a WhatsApp message to schedule an appointment.</p>
       <div class="d-flex justify-content-center flex-wrap gap-3">
         <a href="tel:+8801799915895" class="btn btn-light btn-lg rounded-pill px-4"><i
-            class="bi bi-telephone me-2"></i>Call</a>
+            class="bi bi-telephone me-2"></i><span data-i18n="appointment.call">Call</span></a>
         <a href="https://wa.me/8801799915895" class="btn btn-success btn-lg rounded-pill px-4"><i
-            class="bi bi-whatsapp me-2"></i>WhatsApp</a>
+          class="bi bi-whatsapp me-2"></i><span data-i18n="appointment.whatsapp">WhatsApp</span></a>
       </div>
     </div>
   </section>
@@ -276,35 +291,49 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-5">
-          <span class="section-label">CONTACT</span>
-          <h2>Get in touch</h2>
-          <p class="text-muted">For appointments and chamber-related queries, please use the contact details below.</p>
+          <span class="section-label" data-i18n="contact.label">CONTACT</span>
+          <h2 data-i18n="contact.heading">Get in touch</h2>
+          <p class="text-muted" data-i18n="contact.description">For appointments and chamber-related queries, please use the contact details below.</p>
           <div class="contact-item"><i class="bi bi-telephone"></i>
-            <div><strong>Phone</strong><br>+880 1799-915895</div>
+            <div><strong data-i18n="contact.phone">Phone</strong><br>+880 1799-915895</div>
           </div>
           <div class="contact-item"><i class="bi bi-envelope"></i>
-            <div><strong>Email</strong><br><a>doctor@example.com</a></div>
+            <div><strong data-i18n="contact.email">Email</strong><br><a>doctor@example.com</a></div>
           </div>
           <div class="contact-item"><i class="bi bi-geo-alt"></i>
-            <div><strong>Location</strong><br>Dhaka, Bangladesh</div>
+            <div><strong data-i18n="contact.location">Location</strong><br><span data-i18n="contact.locationValue">Dhaka, Bangladesh</span></div>
+          </div>
+          <div class="vcard-card">
+            <div class="vcard-qr-slot">
+              <img class="vcard-qr-image" src="images/vcard-qr.jpg" alt="QR code to save Dr. Ascif Al Mahady's contact details" data-i18n="contact.qrAlt" data-i18n-attr="alt" decoding="async">
+              <div class="vcard-qr-placeholder" aria-hidden="true">
+                <i class="bi bi-qr-code"></i>
+                <span data-i18n="contact.qrLabel">vCard QR code</span>
+              </div>
+            </div>
+            <div class="vcard-copy">
+              <span data-i18n="contact.vcard">V-CARD</span>
+              <h3 data-i18n="contact.saveContact">Save contact</h3>
+              <p data-i18n="contact.scanDescription">Scan to add the doctor's details to your contacts.</p>
+            </div>
           </div>
         </div>
         <div class="col-lg-7">
           <form class="contact-form" onsubmit="sendWhatsApp(event)">
 
-            <input id="patientName" class="form-control" type="text" placeholder="Your Name" required>
+            <input id="patientName" class="form-control" type="text" placeholder="Your Name" data-i18n="form.name" data-i18n-attr="placeholder" required>
 
-            <input id="patientPhone" class="form-control" type="tel" placeholder="Phone Number" required>
+            <input id="patientPhone" class="form-control" type="tel" placeholder="Phone Number" data-i18n="form.phone" data-i18n-attr="placeholder" required>
 
             <textarea id="patientMessage" class="form-control" rows="5"
-              placeholder="Write your message or appointment request" required></textarea>
+              placeholder="Write your message or appointment request" data-i18n="form.message" data-i18n-attr="placeholder" required></textarea>
 
             <button class="btn btn-primary rounded-pill px-4" type="submit">
               <i class="bi bi-whatsapp me-2"></i>
-              Request Appointment
+              <span data-i18n="form.submit">Request Appointment</span>
             </button>
 
-            <small class="text-muted">
+            <small class="text-muted" data-i18n="form.redirectNotice">
               You will be redirected to WhatsApp to send your appointment request.
             </small>
 
@@ -317,7 +346,7 @@
   <footer>
     <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>© <span id="year"></span> Dr. Ascif Al Mahady (Anik). All rights reserved.</span>
-      <span>For information and appointment purposes only.</span>
+      <span data-i18n="footer.notice">For information and appointment purposes only.</span>
     </div>
   </footer>
 
